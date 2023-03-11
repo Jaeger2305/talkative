@@ -8,6 +8,7 @@ public class InteractableItemSlot : Interactable
 	private Transform itemSlot;
 	[SerializeField]
 	private Item containedItem;
+	public ItemType? ContainedItemType => this.containedItem != null ? this.containedItem.ItemType : (ItemType?)null;
 
 	[SerializeField]
 	private bool canPickItem = true;

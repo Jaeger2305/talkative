@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class Condition : MonoBehaviour
 {
-	public bool IsFullfilled { get; }
+	abstract public bool IsFullfilled { get; }
 }
