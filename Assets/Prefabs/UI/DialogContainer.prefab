@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2128703496743159601}
   - component: {fileID: 2128703496743159600}
   - component: {fileID: 2128703496743159603}
+  - component: {fileID: 5315314912691857859}
   m_Layer: 5
   m_Name: DialogueText
   m_TagString: Untagged
@@ -158,6 +159,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &5315314912691857859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128703496743159605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d2e625bf38c3149bc478aa1b457e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 1
+  ColorTint: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2128703497036253948
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539e97eb7ce621d458635c92c0df4f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueTextElement: {fileID: 2128703496743159600}
+  dialogueTextElement: {fileID: 5315314912691857859}
   speakerTextElement: {fileID: 2128703497375577114}
   speakerTextContainer: {fileID: 2128703497375577119}
 --- !u!1 &2128703497375577119

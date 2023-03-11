@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 public class DialogueManager : MonoBehaviour
 {
 	[SerializeField]
-	private TextMeshProUGUI dialogueTextElement;
+	private TMProTextFader dialogueTextElement;
 	[SerializeField]
 	private TextMeshProUGUI speakerTextElement;
 	[SerializeField]
@@ -39,14 +39,14 @@ public class DialogueManager : MonoBehaviour
 	public Task<bool> ShowText(string dialogueText, string speakerText = null)
 	{
 		this.CancelPreviousDialogue();
+		this.gameObject.SetActive(true);
 		var speakerPresent = !string.IsNullOrEmpty(speakerText);
 		this.speakerTextContainer.SetActive(speakerPresent);
 		if (speakerPresent)
 		{
 			this.speakerTextElement.text = speakerText;
 		}
-		this.dialogueTextElement.text = dialogueText;
-		this.gameObject.SetActive(true);
+		this.dialogueTextElement.Text = dialogueText;
 		this.openFrame = Time.frameCount;
 
 		this.completionSource = new TaskCompletionSource<bool>();

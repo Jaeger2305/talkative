@@ -722,5 +722,45 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5315314912691857859, guid: d6d8bc3072ed64d4182e331f72987588, type: 3}
+      propertyPath: fadeSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315314912691857859, guid: d6d8bc3072ed64d4182e331f72987588, type: 3}
+      propertyPath: ColorTint.a
+      value: 0.49803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315314912691857859, guid: d6d8bc3072ed64d4182e331f72987588, type: 3}
+      propertyPath: ColorTint.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315314912691857859, guid: d6d8bc3072ed64d4182e331f72987588, type: 3}
+      propertyPath: ColorTint.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315314912691857859, guid: d6d8bc3072ed64d4182e331f72987588, type: 3}
+      propertyPath: ColorTint.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315314912691857859, guid: d6d8bc3072ed64d4182e331f72987588, type: 3}
+      propertyPath: colorTint.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315314912691857859, guid: d6d8bc3072ed64d4182e331f72987588, type: 3}
+      propertyPath: colorTint.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315314912691857859, guid: d6d8bc3072ed64d4182e331f72987588, type: 3}
+      propertyPath: colorTint.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315314912691857859, guid: d6d8bc3072ed64d4182e331f72987588, type: 3}
+      propertyPath: colorTint.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315314912691857859, guid: d6d8bc3072ed64d4182e331f72987588, type: 3}
+      propertyPath: rolloverCharacterSpread
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6d8bc3072ed64d4182e331f72987588, type: 3}
