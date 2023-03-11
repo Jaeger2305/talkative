@@ -518,7 +518,9 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Ambience
   - Music
+  - Voice
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
