@@ -6,6 +6,8 @@ public class PlayerHeldItem : MonoBehaviour
 {
 	[SerializeField]
 	private Transform itemParent;
+	[SerializeField]
+	private float heldScaleFactor = 0.25f;
 
 	private Item heldItem;
 	public bool HoldsItem => this.heldItem != null;
@@ -18,6 +20,7 @@ public class PlayerHeldItem : MonoBehaviour
 			if (this.itemParent != null)
 			{
 				item.transform.SetParent(this.itemParent, worldPositionStays: false);
+				item.transform.localScale *= this.heldScaleFactor;
 				item.gameObject.SetActive(true);
 			}
 			else
@@ -35,6 +38,7 @@ public class PlayerHeldItem : MonoBehaviour
 			var item = this.heldItem;
 			this.heldItem = null;
 			item.transform.SetParent(itemTarget, worldPositionStays: false);
+			item.transform.localScale /= this.heldScaleFactor;
 			item.HandleItemPlacement();
 			return item;
 		}
