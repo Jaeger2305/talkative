@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-	abstract public void Interact();
+	abstract public void Interact(PlayerInteractionManager manager);
 	private readonly List<InteractableTrigger> triggersEntered = new();
 
 	public void TriggerEntered(InteractableTrigger trigger, PlayerInteractionManager manager)

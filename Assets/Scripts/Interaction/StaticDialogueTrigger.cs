@@ -12,7 +12,7 @@ public class StaticDialogueTrigger : Interactable
 	[TextArea(3, 10)]
 	private string dialogueText;
 
-	public override void Interact()
+	public override void Interact(PlayerInteractionManager manager)
 	{
 		dialogues.ShowText(this.dialogueText, this.speakerName);
 	}

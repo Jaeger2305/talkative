@@ -30,11 +30,7 @@ public class PlayerInteractionManager : MonoBehaviour
 		// TODO(rw): refactor to propery input handling
 		if (this.AreInteractionsAllowed && Input.GetKeyDown(KeyCode.E))
 		{
-			var interactable = this.FirstInteractable;
-			if (interactable != null)
-			{
-				interactable.Interact();
-			}
+			this.Interact();
 		}
 	}
 	private void CheckHasInteractableChange()
@@ -58,7 +54,7 @@ public class PlayerInteractionManager : MonoBehaviour
 		var interactable = this.FirstInteractable;
 		if (interactable != null)
 		{
-			interactable.Interact();
+			interactable.Interact(this);
 		}
 	}
 }
