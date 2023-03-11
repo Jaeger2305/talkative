@@ -10,6 +10,7 @@ public class PlayerInteractionManager : MonoBehaviour
 	public bool HasInteractable => FirstInteractable != null;
 	public event System.Action<bool> OnHasInteractableChanged;
 	private bool previousHasInteractable = false;
+	public bool AreInteractionsAllowed { get; set; } = true;
 
 	public void RegisterInteractable(Interactable interactable)
 	{
@@ -27,7 +28,7 @@ public class PlayerInteractionManager : MonoBehaviour
 		this.CheckHasInteractableChange();
 
 		// TODO(rw): refactor to propery input handling
-		if (Input.GetKeyDown(KeyCode.O))
+		if (this.AreInteractionsAllowed && Input.GetKeyDown(KeyCode.E))
 		{
 			var interactable = this.FirstInteractable;
 			if (interactable != null)

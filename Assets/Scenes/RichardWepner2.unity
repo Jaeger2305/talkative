@@ -6593,6 +6593,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2637646503791626914, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 157843099}
     - target: {fileID: 4459864850019384736, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_Enabled
       value: 1

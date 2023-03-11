@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
 	private TaskCompletionSource<bool> completionSource;
 
 	public bool IsDialogueOpen => this.completionSource != null;
+	private int openFrame;
 
 
 	void Awake()
@@ -23,6 +24,14 @@ public class DialogueManager : MonoBehaviour
 		if (this.completionSource == null)
 		{
 			this.gameObject.SetActive(false);
+		}
+	}
+
+	void Update()
+	{
+		if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Escape)) && Time.frameCount != this.openFrame)
+		{
+			this.FinishCurrentDilogue(true);
 		}
 	}
 
@@ -38,6 +47,7 @@ public class DialogueManager : MonoBehaviour
 		}
 		this.dialogueTextElement.text = dialogueText;
 		this.gameObject.SetActive(true);
+		this.openFrame = Time.frameCount;
 
 		this.completionSource = new TaskCompletionSource<bool>();
 		return this.completionSource.Task;
