@@ -6,6 +6,7 @@ public enum ItemType
 {
 	crystal,
 	Cake,
+	Mouse,
 }
 
 [CreateAssetMenu(fileName = "Resource", menuName = "GameData/Resource", order = 1)]
