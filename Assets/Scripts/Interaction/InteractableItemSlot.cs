@@ -14,6 +14,11 @@ public class InteractableItemSlot : Interactable
 	[SerializeField]
 	private bool canPlaceItem = true;
 
+	[SerializeField]
+	private bool limitPlaceableItems = false;
+	[SerializeField]
+	private List<ItemType> allowedItemTypes = new();
+
 	public override void Interact(PlayerInteractionManager manager)
 	{
 		var itemHolder = manager.GetComponent<PlayerHeldItem>();
@@ -29,11 +34,16 @@ public class InteractableItemSlot : Interactable
 			}
 			else
 			{
-				if (this.canPlaceItem && this.containedItem == null)
+				if (this.containedItem == null && this.IsPlacementAllowed(itemHolder.HeldItemType.Value))
 				{
 					this.containedItem = itemHolder.PlaceItem(this.itemSlot);
 				}
 			}
 		}
+	}
+
+	private bool IsPlacementAllowed(ItemType itemType)
+	{
+		return this.canPlaceItem && (!this.limitPlaceableItems || this.allowedItemTypes.Contains(itemType));
 	}
 }
