@@ -55,6 +55,7 @@ public class DialogueManager : MonoBehaviour
 
 	private void CancelPreviousDialogue()
 	{
+		Debug.LogFormat("Cancel Dialogue");
 		if (this.completionSource != null)
 		{
 			this.gameObject.SetActive(false);
@@ -65,6 +66,7 @@ public class DialogueManager : MonoBehaviour
 
 	public void FinishCurrentDilogue(bool result = true)
 	{
+		Debug.LogFormat("Finish Dialogue");
 		if (this.completionSource != null)
 		{
 			this.gameObject.SetActive(false);

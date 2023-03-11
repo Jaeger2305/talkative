@@ -11,6 +11,7 @@ public class PlayerHeldItem : MonoBehaviour
 
 	private Item heldItem;
 	public bool HoldsItem => this.heldItem != null;
+	public ItemType? HeldItemType => this.heldItem != null ? this.heldItem.ItemType : (ItemType?)null;
 
 	public void PickItem(Item item)
 	{
@@ -52,7 +53,7 @@ public class PlayerHeldItem : MonoBehaviour
 	{
 		if (this.heldItem != null)
 		{
-			Object.Destroy(this.heldItem);
+			Object.Destroy(this.heldItem.gameObject);
 			this.heldItem = null;
 		}
 	}
